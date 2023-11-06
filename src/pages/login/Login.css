@@ -1,0 +1,7 @@
+.inputFormulario {
+    border: 1px solid #ccc;
+  }
+  
+  .inputFormulario.error {
+    border: 2px solid red;
+  }

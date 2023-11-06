@@ -1,0 +1,66 @@
+
+.containerA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerSignup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 15px 30px rgb(68, 66, 66);
+    width: 30%;
+    height: 30%;
+    border-bottom-right-radius: 10px; 
+    border-top-right-radius: 10px; 
+
+}
+.buttonCriar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.buttonCriar:hover {
+    background-color: #0056b3;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    gap: 10px;
+    color: #0056b3;
+    align-items: center;
+}
+
+.texto {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.containLogo{
+    background-color: #e5ebf2c0;
+    width: 60vh;
+    height: 34vh;
+    border-bottom-left-radius: 10px; 
+    border-top-left-radius: 10px; 
+    box-shadow: 0px 15px 30px rgb(68, 66, 66);
+
+}
+.inputFormulario {
+    background-color: #e5ebf2c0;
+    border-radius: 20px;
+    border-color:  #e5ebf2c0;
+    width: 15vw;
+    height: 2vh;
+}

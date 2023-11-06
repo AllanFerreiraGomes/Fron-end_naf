@@ -1,0 +1,119 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7e2e2;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .container {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    place-items: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 10px 30px 50px 1px #4e4343;
+    
+  }
+  
+  .containerMostrarOsHorariosDisponiveis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    max-height: 400px; /* Defina a altura máxima do contêiner */
+    overflow-y: auto; /* Adicione uma barra de rolagem vertical quando necessário */
+    max-width: 13%;
+    margin-left: 3%;
+}
+  
+  .containerMostrarOsHorariosDisponiveis button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .containerMostrarOsHorariosDisponiveis button:hover {
+    background-color: #45a049;
+  }
+  
+  .escolherHorarios {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; 
+    margin-top: 20px;  
+    margin-left: 100px;
+  }
+  
+  .escolherHorarios h3 {
+    margin-top: 0; /* Remove o espaçamento de cima do título */
+  }
+  
+  input[type="number"],
+  button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-right: 0px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
+    margin-top: 10px;
+  }
+  
+  h2, h3 {
+    color: #007bff;
+  }
+  .exibirHorarios{
+    margin-left: 3%;
+  }
+  .buttonReservar{
+    background-color: #0056b3;
+}
+
+.containLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; 
+}
+
+.imagemLogo {
+  width: 200px;
+}
+
+.containerInputAvaliar {
+padding: 1% 75% 0px  ;
+}
+.inputAvaliar{
+  width: 12vw;
+  height: 3vh;
+  border-radius: 20px;
+  padding-left: 10px;
+  font-size: 90%;
+}
