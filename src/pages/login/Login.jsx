@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import bcrypt from 'bcryptjs';
 import '../cadastrar/Cadastrar.css';
 import logo from '../../../../../../../allan/Downloads/logo.png';
 import '../login/Login.css';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [emailError, setEmailError] = useState(false);
@@ -24,8 +27,7 @@ const Login = () => {
         // Compare a senha inserida com o hash armazenado usando o bcrypt
         bcrypt.compare(senha, storedUser.senha, (err, result) => {
           if (result) {
-            // Login bem-sucedido
-            alert('Login realizado com sucesso!');
+            navigate('/Home');
           } else {
             // Senha incorreta
             setEmailError(true);
@@ -54,7 +56,7 @@ const Login = () => {
           <img className='imagemLogo' src={logo} alt="Logo dedo de Deus Unifeso" /> 
         </div>
 
-        <div className="containerSignup">
+        <div className="containerSignin">
           <h2 className='texto'>Login</h2>
           <form onSubmit={buttonLogin}>
             <div className="formulario">
@@ -77,7 +79,8 @@ const Login = () => {
                 required
               />
             </div>
-            <button className='buttonCriar' type="submit" >Login</button>
+            <button className='buttonCriar' type="submit" >Entrar</button>
+            <RouterLink to="/cadastrar">Criar Conta</RouterLink>
           </form>
         </div>
       </div>

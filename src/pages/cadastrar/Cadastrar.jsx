@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import bcrypt from 'bcryptjs';
 import '../cadastrar/Cadastrar.css'
 import logo from '../../../../../../../allan/Downloads/logo.png'
-
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
 const Cadastrar = () => {
-  const [nome, setNome] = useState('');
+  const navigate = useNavigate();
+
+  const   [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [curso, setCurso] = useState('');
 
   const buttonCadastrar = event => {
     event.preventDefault();
@@ -19,11 +22,13 @@ const Cadastrar = () => {
           if (err) throw err;
   
           // Crie um objeto de usuário com a senha criptografada
-          const usuario = { nome, email, senha: hash };
+          const usuario = { nome, email,curso ,senha: hash };
   
           // Salve o usuário no localStorage
           localStorage.setItem('usuario', JSON.stringify(usuario));
           alert('Conta criada com sucesso!');
+          navigate('/login');
+
         });
       });
     } else {
@@ -72,7 +77,19 @@ const Cadastrar = () => {
             required
           />
         </div>
+
+        <div className="formulario">
+          <label>Curso:</label>
+          <input
+            className='inputFormulario'
+            type="text"
+            value={curso}
+            onChange={e => setCurso(e.target.value)}
+            required
+          />
+        </div>
         <button className='buttonCriar' type="submit">Criar Conta</button>
+        <RouterLink to="/">Já tenho uma conta</RouterLink>
       </form>
     </div>
     </div>

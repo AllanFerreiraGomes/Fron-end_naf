@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import '../home/Home.css'
 import { FaUser } from 'react-icons/fa';
 import logo from '../../../../../../../allan/Downloads/logo.png'
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
 
 function Home() {
+  const navigate = useNavigate();
+
   const [escolherDia, setEscolherDia] = useState(null);
   const [filtroDia, setFiltroDia] = useState('');
   const [filtroMes, setFiltroMes] = useState('');
@@ -121,8 +124,10 @@ function Home() {
   }
   return (
     <>
+        <div className='add'></div>
+        <RouterLink to="/perfiluser">perfil</RouterLink>
 
-        <div className='containLogo'>
+        <div className='containLogoHome'>
              <img className='imagemLogo' src={logo} alt="Logo dedo de Deus Unifeso" /> 
          </div>
 
@@ -184,6 +189,7 @@ function Home() {
      
                 />
           </div>  
+
     </>
   );
 }
