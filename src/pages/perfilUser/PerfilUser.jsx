@@ -1,7 +1,10 @@
 import React from "react";
 import { useusuario } from "../../context/UserProvider";
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import '../perfilUser/PerfilUser'
+import '../perfilUser/PerfilUser.css'
+import { FaArrowLeft } from 'react-icons/fa';
+import logo from '../../assets/logo.png';
+
 
 const PerfilUser = () => {
   const navigate = useNavigate();
@@ -13,12 +16,21 @@ const PerfilUser = () => {
   }
 
   return (
-    <div className="containerPefilUser"> 
-      <RouterLink to="/home">Já tenho uma conta</RouterLink>
-      <h1>Perfil do Usuário</h1>
-      <p>Nome: {usuario.nome}</p>
-      <p>Email: {usuario.email}</p>
-      <p>Curso: {usuario.curso}</p>
+    <div className="containerPefilUser">
+      <div className='containLogoHome'>
+        <img className='imagemLogo' src={logo} alt="Logo dedo de Deus Unifeso" />
+      </div>
+      <div className="icons">
+        <RouterLink to="/home">
+          <FaArrowLeft size={30} color='black' />
+        </RouterLink>
+      </div>
+      <h1 className="perfilUser">Perfil do Usuário</h1>
+      <div className="containConteudo">
+        <p>Nome: {usuario.nome}</p>
+        <p>Email: {usuario.email}</p>
+        <p>Curso: {usuario.curso}</p>
+      </div>
     </div>
   );
 };

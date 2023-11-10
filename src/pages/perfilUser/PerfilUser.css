@@ -1,4 +1,58 @@
 .containerPefilUser {
-    background-color: red !important;
-    color: aqua;
+    max-width: 50%;
+    height: 55vh;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    margin-top: 8%;
+    
+}
+
+.containerPefilUser a {
+    display: block;
+    margin-bottom: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.containerPefilUser h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.containerPefilUser p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.icons {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containLogoHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.containConteudo {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: auto; 
+    padding: 10px
+  }
+.perfilUser{
+    display: flex;
+    border-bottom: 1px solid #000000; 
+    width: 70%;
+    margin: auto;   
+    justify-content: center;
 }

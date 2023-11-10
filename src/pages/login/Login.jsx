@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import bcrypt from 'bcryptjs';
 import '../cadastrar/Cadastrar.css';
-import logo from '../../../../../../../allan/Downloads/logo.png';
+import logo from '../../assets/logo.png';
 import '../login/Login.css';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 

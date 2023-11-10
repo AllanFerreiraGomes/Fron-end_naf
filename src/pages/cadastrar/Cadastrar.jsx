@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import bcrypt from 'bcryptjs';
 import '../cadastrar/Cadastrar.css'
-import logo from '../../../../../../../allan/Downloads/logo.png'
+import logo from '../../assets/logo.png';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
 const Cadastrar = () => {
