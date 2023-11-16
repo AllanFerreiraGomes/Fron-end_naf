@@ -27,7 +27,7 @@ const Cadastrar = () => {
           // Salve o usuário no localStorage
           localStorage.setItem('usuario', JSON.stringify(usuario));
           alert('Conta criada com sucesso!');
-          navigate('/login');
+          navigate('/');
 
         });
       });
