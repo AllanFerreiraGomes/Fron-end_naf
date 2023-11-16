@@ -127,6 +127,9 @@ padding: 1% 75% 0px  ;
   background-color: #0056b3;
   width: 100%;
   height: 100px;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
 }
 
 
@@ -135,5 +138,15 @@ padding: 1% 75% 0px  ;
   width: 7%;
   display: flex;
   align-items: center; 
+  margin-left: 1vw;
+
+}
+.logoHeader{
   justify-content: center;
+  height: 11vh;
+  margin-left: 45vw;
+  align-items: center;
+}
+.buttonLogouf{
+  margin-right: 1vw;
 }

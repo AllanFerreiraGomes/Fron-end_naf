@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import '../home/Home.css'
-import { FaUser } from 'react-icons/fa';
+import { FaUser,FaSignOutAlt } from 'react-icons/fa';
 import logo from '../../assets/logo.png';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { useusuario } from "../../context/UserProvider";
+import montanhas from '../../../../../../../Downloads/montanhas.png';
 
 function Home() {
   const navigate = useNavigate();
@@ -130,6 +131,12 @@ function Home() {
         <div className='iconeUser'>
           <RouterLink to="/perfiluser">
             <FaUser size={40} color='black' />
+          </RouterLink>
+          <img className='logoHeader' src={montanhas} alt="Logo dedo de Deus " />
+        </div>
+        <div className='buttonLogouf'>
+          <RouterLink to="/">
+            <FaSignOutAlt size={60} color='black' />
           </RouterLink>
         </div>
       </div>
