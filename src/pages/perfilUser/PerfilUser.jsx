@@ -31,10 +31,7 @@ const PerfilUser = () => {
         <p>Email: {usuario.email}</p>
         <p>Curso: {usuario.curso}</p>
 
-        <p className="horariosReservados">
-          
-          Seus Horários: <br></br>{usuario.horariosReservados.map(horario => <span className="spanHorarios"  key={horario}>{horario}<br /></span>)}</p>
-      </div>
+        </div>
     </div>
   );
 };
