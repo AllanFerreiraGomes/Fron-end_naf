@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useusuario } from "../../context/UserProvider";
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import '../perfilUser/PerfilUser.css'
@@ -30,6 +30,10 @@ const PerfilUser = () => {
         <p>Nome: {usuario.nome}</p>
         <p>Email: {usuario.email}</p>
         <p>Curso: {usuario.curso}</p>
+
+        <p className="horariosReservados">
+          
+          Seus Horários: <br></br>{usuario.horariosReservados.map(horario => <span className="spanHorarios"  key={horario}>{horario}<br /></span>)}</p>
       </div>
     </div>
   );

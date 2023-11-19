@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import '../home/Home.css'
 import { FaUser,FaSignOutAlt } from 'react-icons/fa';
 import logo from '../../assets/logo.png';
@@ -8,15 +8,15 @@ import montanhas from '../../../../../../../Downloads/montanhas.png';
 
 function Home() {
   const navigate = useNavigate();
-  const { usuario } = useusuario();
-
+  const { usuario, adicionarHorarioReservado } = useusuario();
 
   const [escolherDia, setEscolherDia] = useState(null);
   const [filtroDia, setFiltroDia] = useState('');
   const [filtroMes, setFiltroMes] = useState('');
   const [filtroHorario, setFiltroHorario] = useState('');
   const [horarioreservado, setHorarioreservado] = useState(null);
-  const [avaliacao, setAvaliacao] = useState('')
+  const [avaliacao, setAvaliacao] = useState('');
+
 
   const [mock, setMock] = useState([
     {
@@ -88,9 +88,15 @@ function Home() {
     },
   ]);
 
+
+  useEffect(() => {
+    console.log('Horários reservados pelo usuário:', usuario.horariosReservados);
+  }, [usuario.horariosReservados]);
+
   const handleDayClick = (day) => {
     setEscolherDia(day);
   };
+
   const handleFiltrarClick = () => {
     const diaFiltrado = parseInt(filtroDia, 10);
     const mesFiltrado = parseInt(filtroMes, 10);
@@ -118,13 +124,17 @@ function Home() {
 
       mock[diaSelecionadoIndex].horariosDisponiveis = horariosAtualizados;
       setHorarioreservado(horarioFiltrado);
+
+      // Adiciona o horário reservado ao contexto
+      adicionarHorarioReservado(horarioFiltrado);
     }
   };
-  const inputAvaliable = event => {
-    localStorage.setItem('Avaliação: ', event.target.value);
 
+  const inputAvaliable = (event) => {
+    localStorage.setItem('Avaliação: ', event.target.value);
     setAvaliacao(event.target.value);
-  }
+  };
+
   return (
     <>
       <div className='add'>
@@ -144,7 +154,6 @@ function Home() {
       <div className='containLogoHome'>
         <img className='imagemLogo' src={logo} alt="Logo dedo de Deus Unifeso" />
       </div>
-
 
       <div className='container'>
         <div className='containerMostrarOsHorariosDisponiveis'>
@@ -193,17 +202,15 @@ function Home() {
         </div>
       </div>
       <div className='containerInputAvaliar'>
-
-        <input className='inputAvaliar'
+        <input
+          className='inputAvaliar'
           type="text"
           placeholder='Avalie-nos'
           value={avaliacao}
           onChange={inputAvaliable}
           onKeyPress={inputAvaliable}
-
         />
       </div>
-
     </>
   );
 }

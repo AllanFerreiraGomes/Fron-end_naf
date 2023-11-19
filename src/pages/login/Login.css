@@ -4,6 +4,8 @@
   
   .inputFormulario.error {
     border: 2px solid red;
+    background-color: #ffcccc;
+    color: red;
   }
 .containerSignin{
   display: flex;
@@ -18,4 +20,28 @@
   border-bottom-right-radius: 10px; 
   border-top-right-radius: 10px; 
 
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.show-password-button {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 6%; 
+  top: 8%; 
+  transform: translate(50%, -50%); 
+   background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #555; 
+  padding: 0;
+}
+
+
+.show-password-button:hover {
+background-color: transparent;
 }
