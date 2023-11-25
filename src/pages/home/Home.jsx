@@ -88,11 +88,6 @@ function Home() {
     },
   ]);
 
-
-  useEffect(() => {
-    console.log('Horários reservados pelo usuário:', usuario.horariosReservados);
-  }, [usuario.horariosReservados]);
-
   const handleDayClick = (day) => {
     setEscolherDia(day);
   };
@@ -169,7 +164,7 @@ function Home() {
             {mock
               .find((item) => item.dia === escolherDia.dia && item.mes === escolherDia.mes && item.ano === escolherDia.ano)
               .horariosDisponiveis.map((hora) => (
-                <p key={hora}>Horario Disponível: {hora}</p>
+                <p key={hora}>Horario Disponível: {hora}:00</p>
               ))}
           </div>
         )}

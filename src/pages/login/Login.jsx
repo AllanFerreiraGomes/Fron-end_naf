@@ -35,7 +35,6 @@ const Login = () => {
           }
         });
       } else {
-        // Usuário não encontrado no localStorage
         setSenhaError(true);
         setEmailError(true);
       }
