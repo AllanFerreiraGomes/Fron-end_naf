@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useusuario } from "../../context/UserProvider";
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import '../perfilUser/PerfilUser.css'

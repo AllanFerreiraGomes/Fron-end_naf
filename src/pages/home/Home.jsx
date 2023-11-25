@@ -1,14 +1,18 @@
-import React, { useState,useEffect } from 'react';
-import '../home/Home.css'
-import { FaUser,FaSignOutAlt } from 'react-icons/fa';
+import React, { useState } from 'react';
+import '../home/Home.css';
+import { FaUser, FaSignOutAlt } from 'react-icons/fa';
 import logo from '../../assets/logo.png';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { useusuario } from "../../context/UserProvider";
 import montanhas from '../../../../../../../Downloads/montanhas.png';
+import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 function Home() {
   const navigate = useNavigate();
-  const { usuario, adicionarHorarioReservado } = useusuario();
+  const { usuario } = useusuario();
 
   const [escolherDia, setEscolherDia] = useState(null);
   const [filtroDia, setFiltroDia] = useState('');
@@ -16,9 +20,9 @@ function Home() {
   const [filtroHorario, setFiltroHorario] = useState('');
   const [horarioreservado, setHorarioreservado] = useState(null);
   const [avaliacao, setAvaliacao] = useState('');
+  const [modalOpen, setModalOpen] = useState(false);
 
-
-  const [mock, setMock] = useState([
+ const [mock, setMock] = useState([
     {
       dia: 26,
       mes: 10,
@@ -120,13 +124,23 @@ function Home() {
       mock[diaSelecionadoIndex].horariosDisponiveis = horariosAtualizados;
       setHorarioreservado(horarioFiltrado);
 
-      // Adiciona o horário reservado ao contexto
-      adicionarHorarioReservado(horarioFiltrado);
+      // Abra o modal
+      setModalOpen(true);
     }
+  };
+
+  const teste = () =>{
+    setModalOpen(true);
+
+  }
+  const handleCloseModal = () => {
+    // Feche o modal
+    setModalOpen(false);
   };
 
   const inputAvaliable = (event) => {
     localStorage.setItem('Avaliação: ', event.target.value);
+
     setAvaliacao(event.target.value);
   };
 
@@ -168,7 +182,6 @@ function Home() {
               ))}
           </div>
         )}
-
         <div className='escolherHorarios'>
           <h3>Escolha o Dia</h3>
           <input
@@ -206,6 +219,32 @@ function Home() {
           onKeyPress={inputAvaliable}
         />
       </div>
+
+      {/* Modal */}
+      <Modal open={modalOpen} onClose={handleCloseModal}>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 300,
+            bgcolor: 'background.paper',
+            border: '2px solid #000',
+            boxShadow: 24,
+            p: 2,
+            textAlign: 'center',
+          }}
+        >
+          <Typography variant="h6" component="div">
+            Horário reservado com sucesso!
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Enviamos o seu código para o seu email.
+          </Typography>
+          <Button onClick={handleCloseModal}>Fechar</Button>
+        </Box>
+      </Modal>
     </>
   );
 }
