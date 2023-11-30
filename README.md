@@ -13,6 +13,7 @@ serviços oferecidos pelo NAF.
 
 
 # Instruções para Executar o MVP Localmente
+- entrar na página do projeto pelo terminal
 - Rodar o Comando no Terminal: `npm install`
 - Iniciar o Projeto com os Comandos:
 - Para rodar o projeto: `npm run dev`
