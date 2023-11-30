@@ -1,8 +1,19 @@
-# React + Vite
+﻿
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do projeto de Desenvolvimento Front-End para a disciplina Minimum Viable Product do curso de Análise e Desenvolvimento de Sistemas da UNIFESO.
 
-Currently, two official plugins are available:
+#Situação-Problema #1 - AgendaFácil NAF
+• Apresentamos um desafio envolvendo o Núcleode Apoio Contábil e Fiscal (NAF) para criar uma solução de agendamento eficiente e conveniente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#Desafio
+• Desenvolver um website que simplifique o
+agendamento para obter assistência com
+declarações de Imposto de Renda e outros
+serviços oferecidos pelo NAF.
+
+
+# Instruções para Executar o MVP Localmente
+- Rodar o Comando no Terminal: `npm install`
+- Iniciar o Projeto com os Comandos:
+- Para rodar o projeto: `npm run dev`
+
