@@ -17,3 +17,4 @@ serviços oferecidos pelo NAF.
 - Iniciar o Projeto com os Comandos:
 - Para rodar o projeto: `npm run dev`
 
+[MVP Front-End Development (1).pdf](https://github.com/AllanFerreiraGomes/Fron-end_naf/files/13516155/MVP.Front-End.Development.1.pdf)
